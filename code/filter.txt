@@ -1,0 +1,8 @@
+    <div style="margin-left:1%;">
+				 <i>Here you can search through all our  jobs. Enter the role you are looking for and the city you would like to work in. If you do not have a city prefence leave it as is.</i>
+                <br>
+                    <p align=right>Thank you <br> The Lesrabet Team</p>
+            </div> 
+            
+            $query = "SELECT * FROM jobs WHERE MATCH (title, job_description) AGAINST ('$name') AND city LIKE '$city'";
+            $query = "SELECT title, job_description, company, app_deadline, city, job_type, logo FROM jobs WHERE MATCH (title, job_description) AGAINST ('$name')";
